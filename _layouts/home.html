@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<section class="feed">
+    <section class="feed__description", style="flex-direction: row;">
+        <div class='sx-button'>
+            <a href='https://www.example.com/' class='sx-button__content red'>
+              <img src='/assets/img/icons/linkedin-app-icon.svg' style="filter: none; color: white;"/>LinkedIn
+            </a>
+        </div>
+        <div class='sx-button'>
+            <a href='https://www.example.com/' class='sx-button__content red'>
+              <img src='/assets/img/icons/info.svg'/>Github
+            </a>
+        </div>
+        <div class='sx-button'>
+            <a href='https://www.example.com/' class='sx-button__content red'>
+              <img src='/assets/img/icons/info.svg'/>CV
+            </a>
+        </div>
+    </section>
+
+    <section class="feed__description">
+        <p>{{ site.description }}</p>
+    </section>
+    
+    {% for post in site.posts %}
+        <section class="snippet snippet_{{ post.id | slugify: "ascii" }}">
+            {% include snippet.html post=post %}
+        </section>
+    {% endfor %}
+</section>
