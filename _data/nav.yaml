@@ -5,7 +5,7 @@
   subnav: #Subnav. See note [2].
       - title: IoT #Submenu item title.
         url: category/iot.html #Submenu item url.
-        hue: "var(--c-themeHueRed)" #Submenu item hue.
+        hue: "var(--c-themeHueRed2)" #Submenu item hue.
 - title: Projects & Ideas
   url: category/projects.html
   icon: assets/img/icons/work.svg
